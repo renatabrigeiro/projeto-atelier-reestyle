@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-card-grid.css">
     
 </head>
 <body>
@@ -25,16 +26,49 @@
   </header>
 
     <main class="main">
-    <div class="container">
-      <section class="conteudo">
+   
+ 
+
+  <!-- Serviços diponíveis / Cards -->
+    <section id="servicos" class="container">
+      <div class="conteudo-servicos">
         <h1>SERVIÇOS</h1>
-        <p>Reestyle Atelier onde cada peça é única</p>
-        <div>
-        <a class="button" href="index.html">Voltar</a>
-        
+       
+          
+        <!-- Grelha de cartões: 1 coluna no telemóvel, 2 no tablet, 4 no computador -->
+        <div class="card-grid">
+
+          <article class="card">
+            <img src="img/pintura.png" alt="Pintura com técnina de pátina" class="card-img">
+            <div class="card-body">
+              <h3>PINTURA</h3>
+              <p>Renove com cor</p>
+              <a href="pintura.html">Saiba mais</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/restauro.png" alt="Serviço de Restauro e Transformação de Móveis" class="card-img">
+            <div class="card-body">
+              <h3>RESTAURO</h3>
+              <p>Deixe o passado brilhas</p>
+              <a href="restauro.html">Saiba mais</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/workshops.png" alt="Workshops de técnicas de pintura e restauro" class="card-img">
+            <div class="card-body">
+              <h3>WORKSHOPS</h3>
+              <p>Aprenda e aperfeiçoe técnicas connosco</p>
+              <a href="workshop.html">Saiba mais</a>
+            </div>
+          </article>
+
+        </div>
       </div>
-      </section>
-    </div>
+    </section>
+
   </main>
 
   <footer class="footer">

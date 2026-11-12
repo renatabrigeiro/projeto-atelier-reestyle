@@ -1,0 +1,84 @@
+:root{
+--cor-fundo:#f2d3b6;
+--cor-header:#fdf3e9;
+--cor-texto:#8f182e;
+--cor-linha: #f2ceac;
+--cor-soft-destaque:#ca9730;
+--cor-destaque:#661818;
+--raio:8px;
+--shadow:0 14px 35px rgba(69,48,31,.10);
+--fonte-serif:Georgia,'Times New Roman',serif;
+--fonte-sans:Arial,Helvetica,sans-serif
+}
+
+.conteudo-servicos {
+    display: block;
+    padding: 3rem 0;
+}
+
+.conteudo-servicos h2 {
+    margin-bottom: 15px;
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: 1fr;   /* telemóvel: 1 coluna */
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--cor-destaque);
+  border: 1px solid var(--cor-texto);
+  border-radius: var(--raio);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+
+.card-img{
+  width: 100%;
+  aspect-ratio: 1 / 1;          /* imagem sempre quadrada */
+  object-fit: cover;
+  background-color: var(--cor-fundo);
+  padding: 1.5rem;
+}
+
+/* Variante para fotografias: sem margem interior, a foto ocupa o espaço todo */
+.card-img-foto {
+  padding: 0;
+  background-color: var(--cor-fundo);
+}
+
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;                 /* todos os cartões ficam com a mesma altura */
+}
+
+.card-body p {
+  color: var(--cor-soft-destaque);
+  flex-grow: 1;                 /* empurra o link para o fundo do cartão */
+}
+
+.card-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* Tablet */
+@media (min-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* pc */
+@media (min-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
